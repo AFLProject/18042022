@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-[RequireComponent(typeof(Rigidbody))] 
+[RequireComponent(typeof(Rigidbody))]
 
 public class Ball : MonoBehaviour
 {
-    public GameObject win, lose, ground, scoreboard; //пустые объекты для отображения элементов или скрытия
-    public Rigidbody rigidbody;
+    [SerializeField] private GameObject win, lose, ground, scoreboard; //пустые объекты для отображения элементов или скрытия
+    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] private float force;
     private Vector3 moveVector;
-    public float force;
 
-    public float defTime = 0;
-    public Text textdefTime, wintext, losetext, record; //текстовые поля для данных (рекорда)
+    [SerializeField] private float defTime = 0;
+    [SerializeField] private Text textdefTime, wintext, losetext, record; //текстовые поля для данных (рекорда)
     void Start()
     {
         record.text = PlayerPrefs.GetFloat("Score").ToString("F3"); //получение рекорда

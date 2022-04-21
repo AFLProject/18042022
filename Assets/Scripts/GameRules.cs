@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
  */
 public class GameRules : MonoBehaviour
 {
-    public GameObject MenuCanvas, TrackCanvas;
+    [SerializeField] private GameObject MenuCanvas, TrackCanvas;
 
     void Start()
     {

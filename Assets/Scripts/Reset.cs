@@ -14,7 +14,7 @@ public class Reset : MonoBehaviour
     {
         
     }
-    public void ResetScene()
+    private void ResetScene()
     {
         Application.LoadLevel(0);
     }
